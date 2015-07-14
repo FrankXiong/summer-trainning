@@ -20,7 +20,7 @@ p{
 	font-size: 18px;
 }
 .main-wrapper{
-	background-image: url(../img/banner.jpg);
+	background-image: url(../img/bg.jpg);
 	/*固定背景不动*/
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -89,7 +89,7 @@ nav .logo{
 }
 #banner .inner button{
 	border: none;
-	background-color: #333;
+	background-color: rgba(37, 182, 160, 0.8);
 	border-radius: 5px;
 	color:#eee;
 	padding:10px 20px;
@@ -129,7 +129,7 @@ nav .logo{
 	width: 60%;
 }
 .green-section .icons-group{
-	margin: 50px 0;
+	margin: 50px 0 50px 33px;
 }
 .green-section .icons-group .icon{
 	display: inline-block;
@@ -137,6 +137,8 @@ nav .logo{
 	height:80px;
 	border:3px solid #fff;
 	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
 	margin: 30px;
 }
 .green-section .icons-group .icon-3x{
@@ -259,5 +261,46 @@ footer ul{
 	padding: 10px;
 }
 .copyright{
-	padding: 20px;
+	padding:20px;
+	margin: 0;
+	font-size: 16px;
+}
+
+
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.logo:hover, .logo:focus, .logo:active {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
