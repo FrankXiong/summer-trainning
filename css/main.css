@@ -1,0 +1,263 @@
+a{
+	text-decoration: none;
+	color:#fff;
+}
+h1{
+	font-size: 40px;
+	font-weight: 700;
+}
+h2{
+	font-size: 30px;
+	font-weight: 600;
+	margin:0;
+}
+h3{
+	font-size: 20px;
+	font-weight: 500;
+}
+p{
+	letter-spacing:.5px;
+	font-size: 18px;
+}
+.main-wrapper{
+	background-image: url(../img/banner.jpg);
+	/*固定背景不动*/
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: center center; 
+}
+header{
+	background-color: rgba(0,0,0,.3);
+	color:#fff;
+}
+nav{
+	background-color: transparent;
+	height:50px;
+	/*固定定位*/
+	/*position: fixed;
+	width: 100%;*/
+}
+#banner{
+	height:700px;
+	overflow: hidden;
+}
+nav ul{
+	list-style: none;
+	margin: 0;
+	float:right;
+
+}
+nav ul li,nav .logo{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 20px;
+	/*去除inline-block元素的间距*/
+	/*margin-left: -4px;*/
+}
+nav ul li a{
+	line-height: 50px;
+	text-decoration: none;
+	display: inline-block;
+	height: inherit;
+	color:#fff;
+}
+nav .logo{
+	float: left;
+	padding-left: 10px;
+}
+#banner .inner{
+	max-width: 300px;
+	text-align:center;
+	margin: 0 auto;
+	position: relative;
+	top:160px;
+}
+#banner .inner h1{
+	margin: 0;
+	border-top:3px solid #fff;
+	border-bottom:3px solid #fff;
+	padding: 10px 0;
+}
+.sub-heading{
+	/*注意margin边界叠加*/
+	margin:20px auto;
+	width:60%;
+}
+#banner .inner .sub-heading{
+	line-height: 24px;
+}
+#banner .inner button{
+	border: none;
+	background-color: #333;
+	border-radius: 5px;
+	color:#eee;
+	padding:10px 20px;
+	display: block;
+	margin: 50px auto 200px;
+	outline: none;
+}
+/*#banner .inner .more{
+	margin-top: 300px;
+}*/
+.logo{
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.logo a{
+	color: #fff;
+
+}
+.hr{
+	height:2px;
+	background-color: #42CBAC;
+	margin: 20px auto;
+	width:60%;
+}
+.green-section{
+	text-align: center;
+	background-color: rgba(110, 98, 136, 0.8);
+	color:#fff;
+	padding: 100px;
+}
+.wrapper{
+	max-width: 720px;
+	margin: 0 auto;
+} 
+.green-section .hr{
+	width: 60%;
+}
+.green-section .icons-group{
+	margin: 50px 0;
+}
+.green-section .icons-group .icon{
+	display: inline-block;
+	width: 80px;
+	height:80px;
+	border:3px solid #fff;
+	transform:rotate(45deg);
+	margin: 30px;
+}
+.green-section .icons-group .icon-3x{
+	position: relative;
+	top: -54px;
+  left: -101px;
+}
+.green-section .icons-group .icon-3x:last-child{
+	position: relative;
+	left:-92px;
+}
+.gray-section{
+	background-color: rgba(82, 82, 82, 0.8);
+	color: #fff;
+}
+.gray-section .pic-section{
+	width: 45%;
+}
+.pic-section img{
+	width: 100%;
+}
+.gray-section .text-section{
+	width:55%;
+
+}
+.text-section h2{
+	font-size: 30px;
+	margin-bottom:36px;
+}
+.text-section p{
+	width:100%;
+	font-size: 18px;
+
+}
+/*子元素浮动会引起父元素高度塌陷*/
+.article > div{
+	float:left;
+	/*字体大小的设置会改变行高，从而使图片之间出现缝隙*/
+	font-size: 0;
+}
+/*解决父元素高度塌陷的办法*/
+.article{
+ 	overflow: hidden;
+ }
+ /*奇偶选择器*/
+ .article:nth-child(even){
+ 	background-color: rgba(129,129,129,0.4);
+ }
+ /*.article:after{
+ 	content:" ";
+ 	display: block;
+ 	visibility: hidden;
+ 	clear: both;
+ }*/
+.text-section{
+	/*padding: 20px 30px; /*超过宽度（盒子模型）*/
+	/*position: relative;
+	top:50px;
+	left:50px;*/
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	padding: 50px;
+}
+.text-section > *{
+	max-width: 80%;
+}
+.orange-section{
+	background-color: rgba(110, 98, 136, 0.8);
+	color: #fff;
+	padding: 100px;
+}
+.orange-section .heading-wrapper{
+	text-align: center;
+	margin-bottom: 50px;
+}
+/*.orange-section .hr{
+	background-color: rgba(39,39,39..6);
+}*/
+.card{
+	float: left;
+	width:50%;
+	min-height: 300px;
+	padding: 50px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+/*解决父元素高度塌陷*/
+.card-group{
+	overflow: hidden;
+}
+.card h3{
+	margin: 0;
+}
+.card:nth-child(1),.card:nth-child(4),.card:nth-child(5){
+	background-color: rgba(0,0,0,.06);
+}
+.card:nth-child(2),.card:nth-child(3),.card:nth-child(6){
+	background-color: rgba(0,0,0,.10);
+}
+
+footer{
+	background-color: rgba(0, 0, 0, 0.7);
+	color:#fff;
+	text-align: center;
+	min-height: 200px;
+}
+footer ul{
+	list-style: none;
+	margin: 0;
+}
+.share-group{
+	
+	display: block;
+	padding: 50px;
+}
+.share-group li{
+	display: inline-block;
+	padding: 10px;
+}
+.copyright{
+	padding: 20px;
+}
