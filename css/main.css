@@ -132,7 +132,7 @@ nav .logo{
 	width: 60%;
 }
 .green-section .icons-group{
-	margin: 50px 0 50px 33px;
+	margin: 50px 0 50px 31px;
 }
 .green-section .icons-group .icon{
 	display: inline-block;
@@ -147,7 +147,7 @@ nav .logo{
 .green-section .icons-group .icon-3x{
 	position: relative;
 	top: -54px;
-  left: -101px;
+  left: -103px;
 }
 .green-section .icons-group .icon-3x:last-child{
 	position: relative;
